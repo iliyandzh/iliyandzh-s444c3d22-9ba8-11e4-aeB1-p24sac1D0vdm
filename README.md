@@ -19,6 +19,7 @@ To run :
 5. Select the `pom.xml` file for this API
 ![Untitled](https://user-images.githubusercontent.com/43420012/212568646-2ad59a10-90ef-4c75-be4c-ce3d6f0197ca.png)
 
+
 7. Click `Open as Project`
 8. Click `Trust Project`
 9. Fill `application.properties` file with the proper h2 password and username
