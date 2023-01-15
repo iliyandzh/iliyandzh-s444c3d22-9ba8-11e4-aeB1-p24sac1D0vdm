@@ -17,7 +17,7 @@ To run :
 3. Click `Open`
 4. Find the directory where you saved repository and select API that you want to run
 5. Select the `pom.xml` file for this API
-![Untitled](https://user-images.githubusercontent.com/43420012/212568305-bcde79ce-0a8d-4b81-b6b8-ca13393da5b0.jpg)
+![Untitled](https://user-images.githubusercontent.com/43420012/212568646-2ad59a10-90ef-4c75-be4c-ce3d6f0197ca.png)
 
 7. Click `Open as Project`
 8. Click `Trust Project`
