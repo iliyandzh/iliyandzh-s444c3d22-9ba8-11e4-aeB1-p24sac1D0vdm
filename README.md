@@ -2,7 +2,7 @@
 
 Before you begin, ensure you have met the following requirements:
 * <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> / <a href="https://www.eclipse.org/downloads/">Eclipse</a>
-* <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">JDK 17</a
+* <a href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">JDK 17</a>
 ##  🛠️Installing the app
 
 To install properly, follow these steps:
