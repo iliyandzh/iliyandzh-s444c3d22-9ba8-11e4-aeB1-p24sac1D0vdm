@@ -20,6 +20,10 @@ public class CovidDataController {
 
     @GetMapping("/{countryCode}")
     public CovidData getCountryStats(@PathVariable("countryCode") @Capitals String countryCode) {
-        return service.covidData(countryCode);
+        CovidData covidData = service.covidData(countryCode);
+        if(covidData.getDataByCountry() == null){
+
+        }
+        return covidData;
     }
 }

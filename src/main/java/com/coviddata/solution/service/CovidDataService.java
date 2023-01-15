@@ -3,6 +3,7 @@ package com.coviddata.solution.service;
 import com.coviddata.solution.dto.CovidData;
 import com.coviddata.solution.entity.CountryData;
 import com.coviddata.solution.dto.GlobalData;
+import com.coviddata.solution.exception.InvalidCountryCodeException;
 import com.coviddata.solution.repository.CountryDataRepository;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -81,6 +82,9 @@ public class CovidDataService {
 
     public CovidData covidData(String countryCode) {
         val countryData = countryDataRepository.findById(countryCode).orElse(null);
+        if(countryData == null){
+            throw new InvalidCountryCodeException();
+        }
         val globalData = this.globalData;
         return
           CovidData.builder()

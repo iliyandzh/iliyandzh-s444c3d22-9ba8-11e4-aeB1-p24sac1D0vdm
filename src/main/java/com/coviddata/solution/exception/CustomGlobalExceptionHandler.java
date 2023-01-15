@@ -12,6 +12,16 @@ import java.time.LocalDateTime;
 
 @ControllerAdvice
 public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler {
+
+    @ExceptionHandler(CustomRuntimeException.class)
+    public ResponseEntity<CustomErrorResponse> customHandleCustomRuntimeException(Exception exception) {
+        CustomErrorResponse errors = new CustomErrorResponse();
+        errors.setTimeStamp(LocalDateTime.now());
+        errors.setError(exception.getMessage());
+        errors.setStatus(HttpStatus.BAD_REQUEST.value());
+        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+    }
+
     @ExceptionHandler(ConstraintViolationException.class)
     public ResponseEntity<CustomErrorResponse> customHandleConstraintViolationException(Exception exception, WebRequest request) {
         CustomErrorResponse errors = new CustomErrorResponse();
