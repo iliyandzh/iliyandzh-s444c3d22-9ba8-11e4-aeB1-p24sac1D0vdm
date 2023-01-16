@@ -1,6 +1,11 @@
 package com.coviddata.solution.dto;
 
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.Instant;
 
@@ -8,22 +13,27 @@ import java.time.Instant;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class GlobalData {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class GlobalData{
 
-    private String message;
-
+    @JsonProperty("NewConfirmed")
     private Long newConfirmed;
 
+    @JsonProperty("TotalConfirmed")
     private Long totalConfirmed;
 
+    @JsonProperty("NewDeaths")
     private Long newDeaths;
 
+    @JsonProperty("TotalDeaths")
     private Long totalDeaths;
 
+    @JsonProperty("NewRecovered")
     private Long newRecovered;
 
+    @JsonProperty("TotalRecovered")
     private Long totalRecovered;
 
     private Instant date;
 }
+

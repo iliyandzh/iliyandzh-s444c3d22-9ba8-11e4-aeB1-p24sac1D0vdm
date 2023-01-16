@@ -9,6 +9,8 @@ import lombok.Getter;
 @Getter
 public class CovidData {
 
+    private String message;
+
     private GlobalData globalData;
 
     private CountryData dataByCountry;
